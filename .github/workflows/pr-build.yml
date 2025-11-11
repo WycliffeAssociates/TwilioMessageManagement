@@ -23,7 +23,7 @@ jobs:
       uses: NuGet/setup-nuget@v2
       
     - name: Restore NuGet packages
-      run: nuget restore TwilioMessageManagement.sln -PackagesDirectory packages
+      run: nuget restore TwilioMessageManagement.sln -PackagesDirectory TwilioMessageManagement/packages
       
     - name: Build solution
       run: msbuild TwilioMessageManagement.sln /p:Configuration=Release /p:Platform="Any CPU"
